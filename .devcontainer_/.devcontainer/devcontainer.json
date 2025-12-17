@@ -1,0 +1,41 @@
+{
+	"name": "Nuxt 3 + pnpm Dev",
+	"build": {
+	  "dockerfile": "Dockerfile"
+	},
+	"settings": {
+	  "terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"postCreateCommand": "pnpm install",
+	"forwardPorts": [3000],
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+			"Vue.volar",
+			"esbenp.prettier-vscode",
+			"dbaeumer.vscode-eslint",
+			"ms-azuretools.vscode-docker",
+			"p1c2u.docker-compose",
+			"Nuxt.mdc",
+			"ms-vscode-remote.remote-containers",
+			"codezombiech.gitignore",
+			"devantler.git-extension-pack-new",
+			"donjayamanne.git-extension-pack",
+			"imgildev.vscode-vue-pack",
+			"mhutchie.git-graph",
+			"github.vscode-github-actions",
+			"donjayamanne.githistory",
+			"bierner.markdown-preview-github-styles"
+		]
+	  }
+	},
+	"features": {
+		"ghcr.io/devcontainers-extra/features/vercel-cli:1": {}
+	},
+	"mounts": [
+		"source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
+	],
+	"runArgs": [
+		"--privileged"
+	]
+}

@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Ruleset to ALWAYS be followed for "epoch_meta" project:
+
+# Project Description:
+- Nuxt application
+- Only use "dark" mode
+
+## Features:
+- Hero
+- Simple and Minimal
+- Modern
