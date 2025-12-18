@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+"For All" of your solutions you must:
+- run the code
+- Ensure no errors
+- If there are errors then find solutions and make a summary and errortasks.md file.
+- The errortasks.md should create stages to complete.
