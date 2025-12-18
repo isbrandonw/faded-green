@@ -2,6 +2,7 @@
 import { getEntry } from "astro:content";
 import Button from "./user-components/Button.astro";
 import Section from "./Section.astro";
+import ctaBg from "@/assets/og-imgs/cta-bg.png";
 
 const locale = Astro.currentLocale || "en";
 
@@ -38,7 +39,7 @@ const { title, description, enable, fill_button, outline_button } =
   )
 }
 
-<style>
+<style define:vars={{ ctaBgUrl: `url(${ctaBg.src})` }}>
   /* Ensure background image is visible in light mode */
   :global([data-theme="light"]) .cta-container {
     background-blend-mode: multiply;
@@ -47,7 +48,7 @@ const { title, description, enable, fill_button, outline_button } =
 
   /* Dark mode styling */
   :global([data-theme="dark"]) .cta-container {
-    background: url("/src/assets/cta-bg.png") no-repeat center;
+    background: var(--ctaBgUrl) no-repeat center;
     background-size: cover;
     padding: 1rem;
     position: relative;

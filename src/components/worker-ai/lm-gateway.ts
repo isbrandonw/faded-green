@@ -1,12 +1,13 @@
+import type { Ai, AiModels, ExportedHandler, Response as WorkerResponse } from "@cloudflare/workers-types";
 
 export interface Env {
   AI: Ai;
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request, env: Env): Promise<WorkerResponse> {
     const response = await env.AI.run(
-      "@cf/meta/llama-3.1-8b-instruct",
+      "@cf/meta/llama-3.1-8b-instruct" as keyof AiModels,
       {
         prompt: "Why should you use Cloudflare for your AI inference?",
       },
@@ -16,6 +17,6 @@ export default {
         },
       },
     );
-    return new Response(JSON.stringify(response));
+    return new Response(JSON.stringify(response)) as unknown as WorkerResponse;
   },
 } satisfies ExportedHandler<Env>;

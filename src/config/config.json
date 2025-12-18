@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "No Robot Company",
-    "logo": "/src/assets/code-block.svg",
+    "logo": "/src/assets/og-imgs/code-block.svg",
     "logo_darkmode": "/src/assets/og-imgs/logo-dark.svg",
     "logo_width": "127",
     "logo_height": "32",
